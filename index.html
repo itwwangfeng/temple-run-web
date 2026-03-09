@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>神庙逃亡 · Web</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="loading-screen">
+        <div class="logo">TEMPLE RUN</div>
+        <div class="loading-bar">
+          <div class="loading-progress"></div>
+        </div>
+        <div class="loading-text">资源加载中...</div>
+      </div>
+
+      <canvas id="game-canvas"></canvas>
+
+      <div id="hud" class="hidden">
+        <div class="hud-left">
+          <div class="hud-item">距离: <span id="hud-distance">0</span>m</div>
+          <div class="hud-item">金币: <span id="hud-coins">0</span></div>
+        </div>
+        <div class="hud-right">
+          <button id="pause-btn" class="hud-btn">暂停</button>
+        </div>
+      </div>
+
+      <div id="start-screen" class="screen">
+        <div class="screen-panel">
+          <h1>神庙逃亡</h1>
+          <p>键盘操作：A/D 或 ←/→ 换道，空格跳跃，S 下滑</p>
+          <button id="start-btn" class="primary">开始游戏</button>
+          <button id="settings-btn">设置</button>
+          <button id="leaderboard-btn">排行榜</button>
+        </div>
+      </div>
+
+      <div id="pause-screen" class="screen hidden">
+        <div class="screen-panel">
+          <h2>已暂停</h2>
+          <button id="resume-btn" class="primary">继续</button>
+          <button id="restart-btn">重新开始</button>
+          <button id="quit-btn">退出到主菜单</button>
+        </div>
+      </div>
+
+      <div id="gameover-screen" class="screen hidden">
+        <div class="screen-panel">
+          <h2>游戏结束</h2>
+          <div class="result-line">本局距离：<span id="result-distance">0</span>m</div>
+          <div class="result-line">本局金币：<span id="result-coins">0</span></div>
+          <div class="result-line">最高分：<span id="result-best">0</span></div>
+          <button id="restart-btn-2" class="primary">再来一次</button>
+          <button id="quit-btn-2">返回主菜单</button>
+        </div>
+      </div>
+
+      <div id="settings-screen" class="screen hidden">
+        <div class="screen-panel">
+          <h2>设置</h2>
+          <label class="setting-row">
+            音量
+            <input id="volume-range" type="range" min="0" max="1" step="0.05" value="0.7" />
+          </label>
+          <label class="setting-row">
+            画质
+            <select id="quality-select">
+              <option value="high">高</option>
+              <option value="medium">中</option>
+              <option value="low">低</option>
+            </select>
+          </label>
+          <button id="settings-back" class="primary">返回</button>
+        </div>
+      </div>
+
+      <div id="leaderboard-screen" class="screen hidden">
+        <div class="screen-panel">
+          <h2>排行榜</h2>
+          <ol id="leaderboard-list"></ol>
+          <button id="leaderboard-back" class="primary">返回</button>
+        </div>
+      </div>
+
+      <div id="tutorial" class="tutorial hidden">
+        <div>按 A/D 或 ←/→ 换道</div>
+        <div>空格跳跃，S 下滑</div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

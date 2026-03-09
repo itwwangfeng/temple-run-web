@@ -1,0 +1,7 @@
+.vercel
+.vercel-config
+.npm-cache
+node_modules
+dist
+dist.zip
+.env*.local

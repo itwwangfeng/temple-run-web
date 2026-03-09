@@ -1,0 +1,1 @@
+{"root":["./src/main.ts","./src/game/assets.ts","./src/game/audio.ts","./src/game/config.ts","./src/game/eventbus.ts","./src/game/game.ts","./src/game/input.ts","./src/game/runner.ts","./src/game/storage.ts","./src/game/track.ts","./src/game/types.ts","./src/game/ui.ts","./src/types/three.d.ts"],"version":"5.9.3"}
